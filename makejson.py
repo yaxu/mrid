@@ -5,7 +5,7 @@ import json
 
 def generate_json():
     data = {
-        "_base": "sounds/"
+        "_base": "https://raw.githubusercontent.com/yaxu/mrid/main/sounds/"
     }
     
     # Iterate through each directory in the sounds folder
