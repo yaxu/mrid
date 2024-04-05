@@ -18,7 +18,10 @@ def generate_json():
         data[dir_name] = []
         for file_name in file_list:
             if file_name.lower().endswith('.wav'):
-                data[dir_name].append(f"sounds/{dir_name}/{file_name}")
+                if dir_name == 'gi':
+                  data[dir_name].append(f"sounds/ki/{file_name}")
+                else:
+                  data[dir_name].append(f"sounds/{dir_name}/{file_name}")
     os.chdir("../")
     with open('strudel.json', 'w') as json_file:
         # Minify if possible
