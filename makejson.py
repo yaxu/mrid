@@ -10,7 +10,8 @@ def generate_json():
     
     # Iterate through each directory in the sounds folder
     os.chdir("sounds")
-    for dir_name, _, file_list in os.walk('./'):
+    for dir_name, _, file_list in os.walk('./',True,None,True):
+        print(dir_name, file_list)
         if len(file_list) == 0:
             continue
         dir_name = dir_name[2:]  # Remove the './' from the directory name
