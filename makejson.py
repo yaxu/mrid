@@ -5,7 +5,7 @@ import json
 
 def generate_json():
     data = {
-        "_base": "https://raw.githubusercontent.com/yaxu/mrid/main/sounds/"
+        "_base": "https://raw.githubusercontent.com/yaxu/mrid/main/"
     }
     
     # Iterate through each directory in the sounds folder
@@ -17,7 +17,7 @@ def generate_json():
         data[dir_name] = []
         for file_name in file_list:
             if file_name.lower().endswith('.wav'):
-                data[dir_name].append(f"{dir_name}/{file_name}")
+                data[dir_name].append(f"sounds/{dir_name}/{file_name}")
     os.chdir("../")
     with open('strudel.json', 'w') as json_file:
         # Minify if possible
