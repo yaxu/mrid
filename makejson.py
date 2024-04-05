@@ -16,7 +16,7 @@ def generate_json():
         dir_name = dir_name[2:]  # Remove the './' from the directory name
         data[dir_name] = []
         for file_name in file_list:
-            if file_name.lower().endswith('.aif'):
+            if file_name.lower().endswith('.wav'):
                 data[dir_name].append(f"{dir_name}/{file_name}")
     os.chdir("../")
     with open('strudel.json', 'w') as json_file:
